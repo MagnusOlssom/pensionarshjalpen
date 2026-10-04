@@ -169,9 +169,9 @@ def page(*, title, description, path, body, depth, schema=None):
 """
 
 
-def brand():
-    """Namnet uppe till höger. Inte klickbart – inget att råka trycka på."""
-    return f'<div class="brand"><span>{NAME}</span>{LOGO}</div>'
+def brand(depth=0):
+    """Namnet uppe till höger. Länk till startsidan (Magnus önskemål)."""
+    return f'<a class="brand" href="{"../" * depth if depth else "./"}" aria-label="Till startsidan">{NAME}{LOGO}</a>'
 
 
 def grouped(topics):
@@ -267,7 +267,7 @@ def build_topic(meta, all_topics):
 <section class="block {meta.get('color', 'sky')} hero{' has-photo' if has_photo else ''}">
 {CLOUDS}
 <div class="inner">
-{brand()}
+{brand(1)}
 <div class="hero-grid">
 <div class="hero-text">
 {photo}
@@ -411,7 +411,7 @@ def build_amnen(topics):
 <section class="block sun hero">
 {CLOUDS}
 <div class="inner">
-{brand()}
+{brand(1)}
 <div class="hero-grid">
 <div class="hero-text">
 <h1>Det här brukar vi hjälpa till med</h1>
