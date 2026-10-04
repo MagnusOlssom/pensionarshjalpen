@@ -377,7 +377,7 @@ def build_home(topics):
 <div class="about-text">
 {eyebrow("Vem svarar?")}
 <h2>Jag som svarar</h2>
-<p>Hej, jag heter Magnus. Jag startade Pensionärshjälpen för att min mamma så ofta fastnade med tekniken och aldrig fick tag i en människa att fråga.</p>
+<p>Hej, jag heter Magnus. Jag startade Pensionärshjälpen för att en närstående så ofta fastnade med tekniken och aldrig fick tag i en människa att fråga.</p>
 <p>Nu kan du ringa i stället.</p>
 <p class="about-link"><a href="om/">Mer om Pensionärshjälpen</a></p>
 </div>
