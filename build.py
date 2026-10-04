@@ -353,7 +353,7 @@ def build_home(topics):
 <section class="block paper">
 <div class="inner">
 <div class="promise">
-{eyebrow("Vårt löfte")}
+{eyebrow("Tänk på din säkerhet")}
 <h2>Det här gör vi aldrig</h2>
 <ul>
 <li>Vi frågar aldrig efter din kod till BankID, banken eller kortet.</li>
