@@ -1,0 +1,188 @@
+/* Pensionärshjälpen – en sak i taget.
+   Regler: inga menyer, inga popup-rutor, inga rörelser, inga små länkar.
+   Det enda man kan trycka på är stora och står ensamma. */
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("fonts/atkinson-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson";
+  src: url("fonts/atkinson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --ink: #10264a;          /* mörkblå text */
+  --sky: #cdebf7;          /* himmel */
+  --sun: #ffe7a0;          /* sol */
+  --rose: #fbd3de;         /* rosa */
+  --mint: #d3f2e1;         /* mint */
+  --paper: #fffdf8;        /* varmt vitt */
+  --berry: #c2335c;        /* varumärket */
+  --call: #12672f;         /* samtalsknappens grön, som telefonens svara-knapp */
+  --call-dark: #0c4f23;
+  --focus: #ffbf00;
+  --wrap: 40rem;
+  font-size: 137.5%;       /* 22 px grundtext */
+}
+@media (min-width: 900px) { :root { font-size: 150%; } } /* 24 px */
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Atkinson", "Verdana", sans-serif;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--paper);
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: auto; } }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.6em; }
+h1 { font-size: clamp(2.1rem, 8vw, 3.4rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.6rem, 5.5vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+p, ul, ol { margin: 0 0 1em; }
+strong { font-weight: 700; }
+
+/* Block = en helfärgad sektion med ett enda budskap */
+.block { padding: 3.2rem 1.1rem; }
+.block > .inner { max-width: var(--wrap); margin: 0 auto; }
+.sky  { background: var(--sky); }
+.sun  { background: var(--sun); }
+.rose { background: var(--rose); }
+.mint { background: var(--mint); }
+.paper{ background: var(--paper); }
+
+/* Topp: bara namnet. Inte klickbart – inget att råka trycka på. */
+.brand {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-weight: 700; font-size: 1.15rem; margin-bottom: 2.2rem;
+}
+.brand svg { width: 2.4rem; height: 2.4rem; flex: none; }
+
+.hero { position: relative; overflow: hidden; padding-top: 1.6rem; }
+.hero .inner { position: relative; z-index: 1; }
+.cloud { position: absolute; z-index: 0; pointer-events: none; fill: #fff; opacity: 0.9; }
+.cloud.a { width: 16rem; top: 1.5rem; right: -5rem; }
+.cloud.b { width: 11rem; bottom: 1rem; left: -4rem; opacity: 0.7; }
+.lead { font-size: 1.3rem; }
+
+/* ---------- RING-rutan ----------
+   Pekskärm: en stor grön knapp som ringer direkt.
+   Dator/mus: samma nummer som stor text – ingen knapp som öppnar
+   förvirrande "Öppna FaceTime?"-rutor. */
+.call { margin: 1.6rem 0 0.4rem; }
+.call-button {
+  display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+  width: 100%;
+  min-height: 5.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1.4rem;
+  background: var(--call);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 6.2vw, 1.9rem);
+  line-height: 1.15;
+  box-shadow: 0 0.35rem 0 var(--call-dark);
+  -webkit-tap-highlight-color: transparent;
+}
+.call-button:active { transform: translateY(0.25rem); box-shadow: 0 0.1rem 0 var(--call-dark); }
+.call-button svg { width: 2.1rem; height: 2.1rem; flex: none; }
+.call-button .num { white-space: nowrap; display: block; }
+.call-button .small { display: block; font-size: 0.62em; font-weight: 400; }
+.call-desk { display: none; }
+.call-desk .label { font-size: 1.2rem; margin: 0 0 0.2rem; }
+.call-desk .big {
+  display: inline-block;
+  font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: 0.02em;
+  background: #fff; border: 0.18rem solid var(--ink); border-radius: 1.2rem;
+  padding: 0.3rem 1.2rem; margin: 0.2rem 0 0.6rem;
+}
+.call-desk .hint { font-size: 1rem; margin: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .call-button { display: none; }
+  .call-desk { display: block; }
+}
+.call-note { font-size: 1rem; margin-top: 1.1rem; }
+
+/* Listor som bara är text – medvetet inte klickbara */
+.plain-list { list-style: none; padding: 0; }
+.plain-list li {
+  padding: 0.55rem 0 0.55rem 2.2rem; position: relative;
+  border-bottom: 0.1rem dashed rgba(16, 38, 74, 0.25);
+}
+.plain-list li:last-child { border-bottom: 0; }
+/* En bock, inte en prick – prickar kan se ut som knappar man ska trycka på */
+.plain-list li::before {
+  content: "✓"; position: absolute; left: 0.1rem; top: 0.5rem;
+  font-weight: 700; color: var(--berry);
+}
+
+.steps { list-style: none; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 1.3rem 3.6rem; min-height: 2.8rem; }
+.steps li::before {
+  content: counter(s); position: absolute; left: 0; top: -0.15rem;
+  width: 2.6rem; height: 2.6rem; border-radius: 50%;
+  background: var(--ink); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Löftet – vad vi ALDRIG gör */
+.promise {
+  background: #fff; border: 0.2rem solid var(--ink); border-radius: 1.4rem;
+  padding: 1.4rem 1.3rem 0.6rem;
+}
+.promise ul { padding-left: 1.2rem; }
+.promise li { margin-bottom: 0.5rem; }
+
+/* Läs mer – längst ner, stora fält med luft emellan */
+.more { list-style: none; padding: 0; margin: 0; }
+.more li + li { margin-top: 1rem; }
+.more a {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 4rem; padding: 0.8rem 1.2rem;
+  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700;
+  border: 0.15rem solid var(--ink); border-radius: 1.1rem;
+}
+.more a::after { content: "→"; font-size: 1.4rem; flex: none; }
+.more a:active { background: var(--sky); }
+
+.back {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 4rem; padding: 0.8rem 1.2rem; margin-top: 0.5rem;
+  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700;
+  border: 0.15rem solid var(--ink); border-radius: 1.1rem;
+}
+
+/* Undersidornas brödtext */
+.article h2 { font-size: 1.45rem; margin-top: 1.8rem; }
+.article ul { padding-left: 1.3rem; }
+.article li { margin-bottom: 0.45rem; }
+.tip {
+  background: var(--sun); border-radius: 1.1rem; padding: 1rem 1.2rem 0.1rem; margin: 1.4rem 0;
+}
+.warn {
+  background: var(--rose); border-radius: 1.1rem; padding: 1rem 1.2rem 0.1rem; margin: 1.4rem 0;
+}
+
+footer.block { padding-top: 2.4rem; padding-bottom: 3rem; font-size: 0.95rem; }
+footer p { margin-bottom: 0.6rem; }
+
+a:focus-visible, .call-button:focus-visible {
+  outline: 0.25rem solid var(--focus); outline-offset: 0.25rem;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+@media print {
+  .cloud, .call-button { display: none; }
+  .call-desk { display: block; }
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://magnusolssom.github.io/pensionarshjalpen/sitemap.xml
