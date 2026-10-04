@@ -303,3 +303,6 @@ a:focus-visible, .call-button:focus-visible {
 
 /* Smal skärm: molnet uppe till vänster krockar med namnet – göm det. */
 @media (max-width: 600px) { .cloud.a { display: none; } }
+
+/* "Läs mer" rullar mjukt ner i stället för att hoppa. */
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
