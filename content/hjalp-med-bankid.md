@@ -1,6 +1,6 @@
 ---
 title: Hjälp med BankID – ring och prata med en människa
-description: Krånglar BankID? Ring 070-332 69 24 så hjälper en vänlig människa dig att skaffa, förnya eller flytta ditt BankID, steg för steg.
+description: Krånglar BankID? Ring 070-432 69 24 så hjälper en vänlig människa dig att skaffa, förnya eller flytta ditt BankID, steg för steg.
 h1: Krånglar BankID?
 lead: Vi hjälper dig att skaffa, förnya eller flytta ditt BankID. Du ringer, vi tar det steg för steg.
 link: Hjälp med BankID
@@ -9,7 +9,7 @@ order: 10
 home: yes
 color: sky
 faq_q: Kan jag få hjälp med BankID på telefon?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så går vi igenom det tillsammans, steg för steg. Vi frågar aldrig efter dina koder.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så går vi igenom det tillsammans, steg för steg. Vi frågar aldrig efter dina koder.
 ---
 ## Det här brukar krångla
 

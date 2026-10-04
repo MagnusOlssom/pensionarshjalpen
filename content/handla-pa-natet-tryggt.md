@@ -1,6 +1,6 @@
 ---
 title: Handla tryggt på nätet och hämta paket hos ombud
-description: Vill du handla på nätet men är orolig att bli lurad? Ring 070-332 69 24 så hjälper en vänlig människa dig att handla och betala tryggt, steg för steg.
+description: Vill du handla på nätet men är orolig att bli lurad? Ring 070-432 69 24 så hjälper en vänlig människa dig att handla och betala tryggt, steg för steg.
 h1: Hur handlar jag tryggt på nätet?
 lead: Att handla på nätet kan kännas osäkert. Vi hjälper dig att beställa, betala och hämta paketet.
 link: Handla på nätet
@@ -9,7 +9,7 @@ order: 65
 home: yes
 color: mint
 faq_q: Hur vet jag att det är tryggt att handla på nätet?
-faq_a: Handla hos butiker du känner till och klicka inte på länkar i oväntade sms. Ring Pensionärshjälpen på 070-332 69 24 om du vill ha hjälp.
+faq_a: Handla hos butiker du känner till och klicka inte på länkar i oväntade sms. Ring Pensionärshjälpen på 070-432 69 24 om du vill ha hjälp.
 ---
 ## Det här brukar krångla
 

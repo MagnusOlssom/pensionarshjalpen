@@ -1,6 +1,6 @@
 ---
 title: Säga upp abonnemang – mobil, bredband och TV
-description: Vill du säga upp mobil, bredband eller TV men vet inte hur? Ring 070-332 69 24 så hjälper en vänlig människa dig att göra det steg för steg.
+description: Vill du säga upp mobil, bredband eller TV men vet inte hur? Ring 070-432 69 24 så hjälper en vänlig människa dig att göra det steg för steg.
 h1: Hur säger jag upp mitt abonnemang?
 lead: Det kan vara krångligt att säga upp mobil, bredband eller TV. Vi hjälper dig att hitta rätt väg och göra det själv.
 link: Säga upp abonnemang
@@ -9,7 +9,7 @@ order: 50
 home: no
 color: sky
 faq_q: Kan jag säga upp mitt abonnemang innan bindningstiden gått ut?
-faq_a: Det beror på ditt avtal. Läs vad som står om bindningstid, eller ring oss på 070-332 69 24 så tittar vi på det tillsammans.
+faq_a: Det beror på ditt avtal. Läs vad som står om bindningstid, eller ring oss på 070-432 69 24 så tittar vi på det tillsammans.
 ---
 ## Det här brukar krångla
 

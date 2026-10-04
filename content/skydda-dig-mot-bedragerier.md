@@ -1,6 +1,6 @@
 ---
 title: Skydda dig mot bedrägerier – fem enkla regler
-description: Fem enkla regler från Polisen som skyddar dig mot bedragare i telefon och sms. Osäker? Ring 070-332 69 24 och prata med en lugn människa.
+description: Fem enkla regler från Polisen som skyddar dig mot bedragare i telefon och sms. Osäker? Ring 070-432 69 24 och prata med en lugn människa.
 h1: Hur skyddar jag mig mot bedragare?
 lead: Bedragarna låter ofta snälla och säkra. Några få enkla regler gör att du klarar dig.
 link: Skydda dig mot bedrägerier

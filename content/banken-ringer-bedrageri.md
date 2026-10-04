@@ -1,6 +1,6 @@
 ---
 title: Banken ringer – så känner du igen bedragare
-description: Har någon ringt och sagt att de är från banken? Lägg på. Ring 070-332 69 24 så hjälper en lugn människa dig att förstå vad du ska göra nu.
+description: Har någon ringt och sagt att de är från banken? Lägg på. Ring 070-432 69 24 så hjälper en lugn människa dig att förstå vad du ska göra nu.
 h1: Ringde banken och bad dig logga in?
 lead: Banken ber dig aldrig logga in med BankID i ett samtal. Här ser du hur bedragarna gör och vad du gör om det redan har hänt.
 link: Banken ringer

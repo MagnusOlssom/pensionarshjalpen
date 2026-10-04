@@ -1,6 +1,6 @@
 ---
 title: BankID utan pass eller NFC – vilka vägar finns?
-description: Har du inget pass, eller kan telefonen inte läsa av det? Ring 070-332 69 24 så hjälper en vänlig människa dig att se vilka vägar som finns till BankID.
+description: Har du inget pass, eller kan telefonen inte läsa av det? Ring 070-432 69 24 så hjälper en vänlig människa dig att se vilka vägar som finns till BankID.
 h1: Jag har inget pass. Kan jag ändå få BankID?
 lead: Det är krångligt att skaffa BankID utan pass eller id-kort. Vi hjälper dig att se vilka vägar som finns för dig.
 link: BankID utan pass
@@ -9,7 +9,7 @@ order: 15
 home: no
 color: rose
 faq_q: Kan man skaffa BankID utan pass?
-faq_a: Det är svårt, eftersom de flesta banker vill att telefonen läser av ett pass eller nationellt id-kort. Ring oss på 070-332 69 24 så tittar vi på vad som går i ditt fall.
+faq_a: Det är svårt, eftersom de flesta banker vill att telefonen läser av ett pass eller nationellt id-kort. Ring oss på 070-432 69 24 så tittar vi på vad som går i ditt fall.
 ---
 ## Det här brukar krångla
 

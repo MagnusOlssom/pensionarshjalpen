@@ -1,6 +1,6 @@
 ---
 title: Större text i mobilen – iPhone och Android
-description: Är texten i mobilen för liten att läsa? Ring 070-332 69 24 så hjälper en vänlig människa dig att göra texten större, lugnt och på din egen telefon.
+description: Är texten i mobilen för liten att läsa? Ring 070-432 69 24 så hjälper en vänlig människa dig att göra texten större, lugnt och på din egen telefon.
 h1: Texten i mobilen är för liten
 lead: Det går att göra texten större i nästan alla telefoner. Vi hjälper dig att hitta rätt inställning.
 link: Större text
@@ -9,7 +9,7 @@ order: 62
 home: no
 color: mint
 faq_q: Hur gör jag texten större i mobilen?
-faq_a: Det finns en inställning för textstorlek i telefonen. Ring Pensionärshjälpen på 070-332 69 24 så visar vi dig var du trycker.
+faq_a: Det finns en inställning för textstorlek i telefonen. Ring Pensionärshjälpen på 070-432 69 24 så visar vi dig var du trycker.
 ---
 ## Det här brukar krångla
 

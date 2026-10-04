@@ -1,6 +1,6 @@
 ---
 title: Logga in på 1177 – hjälp med tider, journal och recept
-description: Krånglar det att logga in på 1177? Ring 070-332 69 24 så hjälper en vänlig människa dig att boka tid, läsa journalen eller se dina recept, steg för steg.
+description: Krånglar det att logga in på 1177? Ring 070-432 69 24 så hjälper en vänlig människa dig att boka tid, läsa journalen eller se dina recept, steg för steg.
 h1: Jag kommer inte in på 1177
 lead: Vi hjälper dig att logga in på 1177. Där kan du boka tid, läsa din journal och se dina recept.
 link: Logga in på 1177
@@ -9,7 +9,7 @@ order: 20
 home: yes
 color: mint
 faq_q: Hur loggar man in på 1177 med mobilt BankID?
-faq_a: Du väljer att logga in med BankID och godkänner sedan i BankID-appen på din telefon. Ring oss på 070-332 69 24 så gör vi det tillsammans.
+faq_a: Du väljer att logga in med BankID och godkänner sedan i BankID-appen på din telefon. Ring oss på 070-432 69 24 så gör vi det tillsammans.
 ---
 ## Det här brukar krångla
 

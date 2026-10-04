@@ -1,6 +1,6 @@
 ---
 title: Vad är Kivra? Digital post förklarad enkelt
-description: Vad är Kivra och varför kommer posten dit? Ring 070-332 69 24 så förklarar en vänlig människa hur din digitala brevlåda fungerar, i lugn takt.
+description: Vad är Kivra och varför kommer posten dit? Ring 070-432 69 24 så förklarar en vänlig människa hur din digitala brevlåda fungerar, i lugn takt.
 h1: Vad är Kivra egentligen?
 lead: Kivra är en brevlåda i mobilen eller datorn. Vi förklarar hur den fungerar och hjälper dig att komma igång.
 link: Hjälp med Kivra
@@ -9,7 +9,7 @@ order: 30
 home: yes
 color: mint
 faq_q: Vad är Kivra och måste jag ha det?
-faq_a: Kivra är en digital brevlåda där brev från företag och myndigheter kan hamna. Ring 070-332 69 24 så går vi igenom vad det betyder för dig.
+faq_a: Kivra är en digital brevlåda där brev från företag och myndigheter kan hamna. Ring 070-432 69 24 så går vi igenom vad det betyder för dig.
 ---
 ## Det här brukar krångla
 

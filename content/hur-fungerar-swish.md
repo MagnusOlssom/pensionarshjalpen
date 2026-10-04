@@ -1,6 +1,6 @@
 ---
 title: Hur fungerar Swish? En lugn guide för dig som är ny
-description: Undrar du hur Swish fungerar? Ring 070-332 69 24 så hjälper en vänlig människa dig att förstå Swish och betala tryggt med mobilen, steg för steg.
+description: Undrar du hur Swish fungerar? Ring 070-432 69 24 så hjälper en vänlig människa dig att förstå Swish och betala tryggt med mobilen, steg för steg.
 h1: Hur fungerar Swish?
 lead: Swish är ett sätt att skicka pengar med mobilen. Vi förklarar hur det fungerar och hur du gör det tryggt.
 link: Hjälp med Swish
@@ -9,7 +9,7 @@ order: 35
 home: yes
 color: mint
 faq_q: Hur fungerar Swish för en nybörjare?
-faq_a: Med Swish skickar du pengar till någons mobilnummer och godkänner med ditt BankID. Ring 070-332 69 24 så går vi igenom det tillsammans, i lugn takt.
+faq_a: Med Swish skickar du pengar till någons mobilnummer och godkänner med ditt BankID. Ring 070-432 69 24 så går vi igenom det tillsammans, i lugn takt.
 ---
 ## Det här brukar krångla
 

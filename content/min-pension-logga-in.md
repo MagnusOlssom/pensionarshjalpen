@@ -1,6 +1,6 @@
 ---
 title: Logga in på Min pension och Pensionsmyndigheten
-description: Vill du se din pension på nätet men kommer inte in? Ring 070-332 69 24 så hjälper en vänlig människa dig att logga in, steg för steg på din egen telefon.
+description: Vill du se din pension på nätet men kommer inte in? Ring 070-432 69 24 så hjälper en vänlig människa dig att logga in, steg för steg på din egen telefon.
 h1: Hur ser jag min pension på nätet?
 lead: Vi hjälper dig att logga in och hitta det du letar efter om din pension. Du ringer, vi tar det i lugn takt.
 link: Logga in på Min pension
@@ -9,7 +9,7 @@ order: 21
 home: no
 color: sky
 faq_q: Hur loggar man in på Min pension?
-faq_a: De flesta loggar in med mobilt BankID och godkänner i appen på telefonen. Ring oss på 070-332 69 24 så hjälper vi dig att komma in, steg för steg.
+faq_a: De flesta loggar in med mobilt BankID och godkänner i appen på telefonen. Ring oss på 070-432 69 24 så hjälper vi dig att komma in, steg för steg.
 ---
 ## Det här brukar krångla
 

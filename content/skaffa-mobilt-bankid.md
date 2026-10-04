@@ -1,6 +1,6 @@
 ---
 title: Skaffa mobilt BankID för första gången – vi hjälper dig
-description: Ska du skaffa mobilt BankID för första gången? Ring 070-332 69 24 så går en lugn människa igenom det med dig, steg för steg, på din egen telefon.
+description: Ska du skaffa mobilt BankID för första gången? Ring 070-432 69 24 så går en lugn människa igenom det med dig, steg för steg, på din egen telefon.
 h1: Hur skaffar jag mobilt BankID?
 lead: Vi hjälper dig att skaffa mobilt BankID för första gången. Du ringer, och vi tar det i lugn takt.
 link: Skaffa mobilt BankID
@@ -9,7 +9,7 @@ order: 11
 home: no
 color: sun
 faq_q: Hur skaffar man mobilt BankID första gången?
-faq_a: Du skaffar det via din bank, oftast i bankens app med ditt pass eller id-kort. Ring oss på 070-332 69 24 så går vi igenom det tillsammans.
+faq_a: Du skaffar det via din bank, oftast i bankens app med ditt pass eller id-kort. Ring oss på 070-432 69 24 så går vi igenom det tillsammans.
 ---
 ## Det här brukar krångla
 

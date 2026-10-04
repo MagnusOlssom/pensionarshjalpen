@@ -19,8 +19,8 @@ CONTENT = ROOT / "content"
 # Byt till https://pensionarshjalpen.se när domänen är kopplad (och lägg en CNAME-fil i src/).
 SITE_URL = "https://magnusolssom.github.io/pensionarshjalpen"
 NAME = "Pensionärshjälpen"
-PHONE_DISPLAY = "070-332 69 24"
-PHONE_TEL = "+46703326924"
+PHONE_DISPLAY = "070-432 69 24"
+PHONE_TEL = "+46704326924"
 
 # ---------- små byggstenar ----------
 

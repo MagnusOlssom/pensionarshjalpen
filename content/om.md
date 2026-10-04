@@ -1,6 +1,6 @@
 ---
 title: Om Pensionärshjälpen – därför finns vi
-description: Pensionärshjälpen finns för att det ska vara lätt att nå en vänlig människa när mobilen eller datorn krånglar. Ring 070-332 69 24.
+description: Pensionärshjälpen finns för att det ska vara lätt att nå en vänlig människa när mobilen eller datorn krånglar. Ring 070-432 69 24.
 h1: Därför finns Pensionärshjälpen
 lead: Det ska vara lätt att nå en människa när något på nätet krånglar.
 link: Om Pensionärshjälpen

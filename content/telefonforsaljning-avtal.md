@@ -1,6 +1,6 @@
 ---
 title: Telefonförsäljning – har du sagt ja i telefon?
-description: Har en säljare ringt och du sa ja? Ett avtal gäller bara om du godkänt det skriftligt efteråt. Ring 070-332 69 24 så reder vi ut det tillsammans.
+description: Har en säljare ringt och du sa ja? Ett avtal gäller bara om du godkänt det skriftligt efteråt. Ring 070-432 69 24 så reder vi ut det tillsammans.
 h1: Har du sagt ja till något i telefon?
 lead: Ett ja i telefonen räcker inte. Avtalet gäller bara om du har godkänt det skriftligt efter samtalet.
 link: Sagt ja i telefon

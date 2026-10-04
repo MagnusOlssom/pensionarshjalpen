@@ -1,6 +1,6 @@
 ---
 title: Köpa SL-biljett som pensionär – med eller utan app
-description: Krånglar det att köpa SL-biljett i mobilen? Ring 070-332 69 24 så hjälper en vänlig människa dig att köpa biljetten, lugnt och steg för steg.
+description: Krånglar det att köpa SL-biljett i mobilen? Ring 070-432 69 24 så hjälper en vänlig människa dig att köpa biljetten, lugnt och steg för steg.
 h1: Hur köper jag en SL-biljett?
 lead: Många tycker att biljetter i mobilen är krångliga. Du ringer oss, så tar vi det i lugn takt.
 link: Köpa SL-biljett
@@ -9,7 +9,7 @@ order: 60
 home: no
 color: sky
 faq_q: Kan jag få hjälp att köpa SL-biljett i mobilen?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så hjälper vi dig att köpa biljetten i din egen telefon, steg för steg.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att köpa biljetten i din egen telefon, steg för steg.
 ---
 ## Det här brukar krångla
 

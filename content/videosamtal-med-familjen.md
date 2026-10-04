@@ -1,6 +1,6 @@
 ---
 title: Ring videosamtal med familjen – steg för steg
-description: Vill du se barnbarnen när ni pratar? Ring 070-332 69 24 så hjälper en vänlig människa dig att ringa videosamtal i mobilen eller på surfplattan.
+description: Vill du se barnbarnen när ni pratar? Ring 070-432 69 24 så hjälper en vänlig människa dig att ringa videosamtal i mobilen eller på surfplattan.
 h1: Jag vill se familjen när vi pratar
 lead: Med ett videosamtal ser ni varandra i telefonen. Vi hjälper dig att komma igång.
 link: Ring videosamtal
@@ -9,7 +9,7 @@ order: 64
 home: no
 color: sun
 faq_q: Kan jag få hjälp att ringa videosamtal?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så hjälper vi dig att ringa videosamtal på din egen telefon eller surfplatta.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att ringa videosamtal på din egen telefon eller surfplatta.
 ---
 ## Det här brukar krångla
 

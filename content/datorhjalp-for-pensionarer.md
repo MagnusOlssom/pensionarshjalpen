@@ -1,6 +1,6 @@
 ---
 title: Datorhjälp för pensionärer – via telefon i hela Sverige
-description: Datorhjälp och IT-hjälp för pensionärer, via telefon. Ring 070-332 69 24 så får du prata med en vänlig människa, var du än bor i hela Sverige.
+description: Datorhjälp och IT-hjälp för pensionärer, via telefon. Ring 070-432 69 24 så får du prata med en vänlig människa, var du än bor i hela Sverige.
 h1: Behöver du hjälp med datorn eller mobilen?
 lead: Du ringer och pratar med en människa. Vi hjälper dig med dator, mobil och surfplatta, var du än bor.
 link: Datorhjälp i telefon
@@ -9,7 +9,7 @@ order: 70
 home: no
 color: sky
 faq_q: Finns det datorhjälp för pensionärer över telefon?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så hjälper en vänlig människa dig med datorn, mobilen eller surfplattan, var du än bor i Sverige.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper en vänlig människa dig med datorn, mobilen eller surfplattan, var du än bor i Sverige.
 ---
 ## Det här brukar krångla
 

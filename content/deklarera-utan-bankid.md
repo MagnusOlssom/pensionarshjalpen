@@ -1,6 +1,6 @@
 ---
 title: Deklarera utan BankID – vilka vägar finns?
-description: Har du inget BankID men ska deklarera? Ring 070-332 69 24 så hjälper en vänlig människa dig att ta reda på vilka vägar som finns för dig, i lugn takt.
+description: Har du inget BankID men ska deklarera? Ring 070-432 69 24 så hjälper en vänlig människa dig att ta reda på vilka vägar som finns för dig, i lugn takt.
 h1: Kan jag deklarera utan BankID?
 lead: Du är inte ensam om att sakna BankID. Vi hjälper dig att ta reda på vilka andra vägar som finns.
 link: Deklarera utan BankID
@@ -9,7 +9,7 @@ order: 34
 home: no
 color: sun
 faq_q: Kan man deklarera utan BankID?
-faq_a: Många använder BankID, men det finns andra vägar. Skatteverket berättar vilka andra vägar som finns, och du kan ringa oss på 070-332 69 24 så tar vi reda på det tillsammans.
+faq_a: Många använder BankID, men det finns andra vägar. Skatteverket berättar vilka andra vägar som finns, och du kan ringa oss på 070-432 69 24 så tar vi reda på det tillsammans.
 ---
 ## Det här brukar krångla
 

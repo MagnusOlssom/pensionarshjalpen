@@ -1,6 +1,6 @@
 ---
 title: Hjälp med deklarationen för pensionärer – ring oss
-description: Behöver du hjälp med deklarationen? Ring 070-332 69 24 så hjälper en vänlig människa dig att logga in, läsa igenom och skicka in den, i lugn takt.
+description: Behöver du hjälp med deklarationen? Ring 070-432 69 24 så hjälper en vänlig människa dig att logga in, läsa igenom och skicka in den, i lugn takt.
 h1: Hjälp med deklarationen
 lead: Deklarationen kan kännas krånglig, särskilt på nätet. Vi hjälper dig att hitta rätt och läsa igenom den i lugn takt.
 link: Hjälp med deklarationen
@@ -9,7 +9,7 @@ order: 32
 home: yes
 color: sky
 faq_q: Kan jag få hjälp med deklarationen på telefon?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så hjälper vi dig att hitta deklarationen och gå igenom den. Du gör allt själv på din egen telefon eller dator.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att hitta deklarationen och gå igenom den. Du gör allt själv på din egen telefon eller dator.
 ---
 ## Det här brukar krångla
 

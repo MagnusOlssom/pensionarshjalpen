@@ -1,6 +1,6 @@
 ---
 title: Betala parkering med app – ring så hjälper vi dig
-description: Vill du betala parkering med mobilen men vet inte hur? Ring 070-332 69 24 så hjälper en vänlig människa dig att komma igång, lugnt och steg för steg.
+description: Vill du betala parkering med mobilen men vet inte hur? Ring 070-432 69 24 så hjälper en vänlig människa dig att komma igång, lugnt och steg för steg.
 h1: Hur betalar jag parkering med mobilen?
 lead: Allt fler parkeringar vill att du betalar i en app. Vi hjälper dig att komma igång, i din egen takt.
 link: Betala parkering
@@ -9,7 +9,7 @@ order: 61
 home: no
 color: sun
 faq_q: Kan jag få hjälp att betala parkering med app?
-faq_a: Ja. Ring Pensionärshjälpen på 070-332 69 24 så hjälper vi dig att komma igång med appen i din egen telefon.
+faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att komma igång med appen i din egen telefon.
 ---
 ## Det här brukar krångla
 
