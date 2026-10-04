@@ -158,6 +158,9 @@ def page(*, title, description, path, body, depth, schema=None):
 <meta property="og:locale" content="sv_SE">
 <meta name="theme-color" content="#cdebf7">
 <link rel="icon" href="{up}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{up}favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{up}apple-touch-icon.png">
+<link rel="manifest" href="{up}site.webmanifest">
 <link rel="preload" href="{up}fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{up}style.css">
 {ld}
