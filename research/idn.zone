@@ -1,4 +1,7 @@
 $ORIGIN xn--pensionrshjlpen-6kbe.se.
 $TTL 3600
-@	IN	A	192.0.2.1
-www	IN	A	192.0.2.1
+@	IN	A	185.199.108.153
+@	IN	A	185.199.109.153
+@	IN	A	185.199.110.153
+@	IN	A	185.199.111.153
+www	IN	CNAME	magnusolssom.github.io.

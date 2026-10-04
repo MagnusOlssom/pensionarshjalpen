@@ -40,8 +40,7 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-COST_NOTE = "Just nu kostar hjälpen ingenting. Du betalar bara för samtalet, precis som när du ringer en vän."
-NO_ANSWER = "Svarar ingen? Då hjälper vi redan någon annan. Tala in ditt namn och nummer, så ringer vi upp dig så snart vi kan."
+COST_NOTE = "Just nu kostar hjälpen ingenting."
 
 
 def call_box(note=True):
@@ -50,12 +49,11 @@ def call_box(note=True):
     if note:
         extra = f"""
   <p class="call-note">En vänlig människa svarar. Ingen robot, inga knappval.</p>
-  <p class="call-note">{NO_ANSWER}</p>
   <p class="call-cost">{COST_NOTE}</p>"""
     return f"""<div class="call">
   <a class="call-button" href="tel:{PHONE_TEL}">{PHONE_ICON}<span><span class="small">Tryck här, så ringer du oss</span><span class="num">{PHONE_DISPLAY}</span></span></a>
   <div class="call-desk">
-    <p class="label">Ring det här numret från din vanliga telefon:</p>
+    <p class="label">Ring det här numret:</p>
     <p class="big">{PHONE_DISPLAY}</p>
   </div>{extra}
 </div>"""
@@ -361,9 +359,9 @@ def build_home(topics):
 <li>Vi frågar aldrig efter din kod till BankID, banken eller kortet.</li>
 <li>Vi ber dig aldrig att logga in med BankID åt oss.</li>
 <li>Vi ber dig aldrig att föra över pengar.</li>
-<li>Vi ringer bara upp dig om du själv har bett om det, till exempel när du har talat in ett meddelande.</li>
+<li>Vi ringer aldrig upp dig utan att du har bett om det.</li>
 </ul>
-<p>Om någon ringer och säger att de är från oss och ber om något av det här: lägg på. Det är inte vi.</p>
+<p>Om någon som säger att de är från oss ber om något av det här: lägg på.</p>
 </div>
 </div>
 </section>
@@ -374,8 +372,8 @@ def build_home(topics):
 {portrait("")}
 <div class="about-text">
 {eyebrow("Vem svarar?")}
-<h2>Hej, jag heter Magnus</h2>
-<p>Det är jag som svarar. Jag startade Pensionärshjälpen för att min mamma så ofta fastnade med mobilen och aldrig fick tag i en människa att fråga.</p>
+<h2>Jag som svarar</h2>
+<p>Hej, jag heter Magnus. Jag startade Pensionärshjälpen för att min mamma så ofta fastnade med mobilen och aldrig fick tag i en människa att fråga.</p>
 <p>Nu kan du ringa i stället.</p>
 <p class="about-link"><a href="om/">Mer om Pensionärshjälpen</a></p>
 </div>
