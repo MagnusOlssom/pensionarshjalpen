@@ -316,10 +316,11 @@ def build_home(topics):
 </div>
 {call_box()}
 </div>
+<a class="scroll-hint" href="#mer">Läs mer <span aria-hidden="true">↓</span></a>
 </div>
 </section>
 
-<section class="block sun">
+<section class="block sun" id="mer">
 <div class="inner">
 {eyebrow("Vad vi hjälper till med")}
 <h2>Du kan ringa om det mesta som krånglar</h2>
