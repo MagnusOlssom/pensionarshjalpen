@@ -20,8 +20,8 @@ Telefonnummer och adress ändras högst upp i `build.py`.
 
 ## När domänen är köpt
 
-1. Sätt `SITE_URL = "https://pensionarshjalpen.se"` i `build.py`.
-2. Lägg en fil `src/CNAME` med raden `pensionarshjalpen.se` och kör `python3 build.py`.
+1. Sätt `SITE_URL = "https://pensionärshjälpen.se (skrivs xn--pensionrshjlpen-6kbe.se i CNAME-filen)"` i `build.py`.
+2. Lägg en fil `src/CNAME` med raden `pensionärshjälpen.se (skrivs xn--pensionrshjlpen-6kbe.se i CNAME-filen)` och kör `python3 build.py`.
 3. Peka domänens DNS mot GitHub Pages och slå på "Enforce HTTPS" under repots Settings → Pages.
 
 `research/research.md` innehåller underlaget (statistik, källor, sökfraser).
