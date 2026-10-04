@@ -1,6 +1,6 @@
 ---
 title: Större text i mobilen – iPhone och Android
-description: Är texten i mobilen för liten att läsa? Ring 070-432 69 24 så hjälper en vänlig människa dig att göra texten större, lugnt och på din egen telefon.
+description: Är texten i mobilen för liten att läsa? Ring 0704-32 69 24 så hjälper en vänlig människa dig att göra texten större, lugnt och på din egen telefon.
 h1: Texten i mobilen är för liten
 lead: Det går att göra texten större i nästan alla telefoner. Vi hjälper dig att hitta rätt inställning.
 link: Större text
@@ -9,7 +9,7 @@ order: 62
 home: no
 color: mint
 faq_q: Hur gör jag texten större i mobilen?
-faq_a: Det finns en inställning för textstorlek i telefonen. Ring Pensionärshjälpen på 070-432 69 24 så visar vi dig var du trycker.
+faq_a: Det finns en inställning för textstorlek i telefonen. Ring Pensionärshjälpen på 0704-32 69 24 så visar vi dig var du trycker.
 ---
 ## Det här brukar krångla
 
@@ -21,7 +21,7 @@ faq_a: Det finns en inställning för textstorlek i telefonen. Ring Pensionärsh
 
 ## Bra att veta
 
-Dålig syn är ett vanligt skäl till att äldre slutar använda internet. Det visar Svenskarna och internet. Men ofta räcker det med att göra texten större.
+Att synen blir sämre är ett vanligt skäl till att man slutar använda internet. Det visar undersökningen Svenskarna och internet. Ofta räcker det med att göra texten större.
 
 I telefonens inställningar finns det ett ställe för textstorlek. Där kan du göra texten större eller mindre. Det ser olika ut i olika telefoner. Därför visar vi dig var du trycker på just din.
 
@@ -30,7 +30,7 @@ I telefonens inställningar finns det ett ställe för textstorlek. Där kan du 
 Det finns också inställningar för fetare text och större ikoner. Ikoner är de små bilderna du trycker på för att öppna något.
 
 :::tip
-**Tips:** Ha gärna glasögonen på när vi ringer. Då är det lättare att se vad som händer.
+**Tips:** Sitt gärna där ljuset är bra när du ringer. Då är det lättare att se vad som händer på skärmen.
 :::
 
 ## Så hjälper vi dig

@@ -1,15 +1,15 @@
 ---
 title: Hjälp din mamma eller pappa med det digitala
-description: Kan du inte alltid hjälpa mamma eller pappa med mobilen? Ge dem numret 070-432 69 24 så får de prata med en vänlig människa när det krånglar.
+description: Kan du inte alltid hjälpa mamma eller pappa med mobilen? Ge dem numret 0704-32 69 24 så får de prata med en vänlig människa när det krånglar.
 h1: Du kan inte alltid vara där
-lead: Ge din mamma eller pappa vårt nummer. När det krånglar ringer de oss och får hjälp direkt av en människa.
+lead: Ge din mamma eller pappa vårt nummer. När det krånglar ringer de oss och får hjälp av en människa som har tid.
 link: För anhöriga
 group: Om hjälpen
 order: 71
 home: yes
 color: rose
 faq_q: Hur kan jag hjälpa min förälder med mobilen när jag inte är där?
-faq_a: Ge din förälder numret till Pensionärshjälpen, 070-432 69 24. Där får de hjälp av en vänlig människa, steg för steg.
+faq_a: Ge din förälder numret till Pensionärshjälpen, 0704-32 69 24. Där får de hjälp av en vänlig människa, steg för steg.
 ---
 ## Det här brukar krångla
 
@@ -30,9 +30,9 @@ Ofta är det inte förmågan som saknas. Det är oron för att göra fel. En lug
 Prata gärna med din förälder om bedrägerier. Det rekommenderar Polisen. Påminn om att aldrig logga in med BankID för att någon har ringt.
 
 :::tip
-**Tips:** Skriv numret 070-432 69 24 på en lapp och lägg den vid telefonen. Spara det också i mobilen som **Pensionärshjälpen**.
+**Tips:** Skriv numret 0704-32 69 24 på en lapp och lägg den vid telefonen. Spara det också i mobilen som **Pensionärshjälpen**.
 :::
 
 ## Så hjälper vi dig
 
-Din förälder ringer oss när något krånglar. Vi berättar vad hen ska trycka på, och hen gör allt själv på sin egen telefon. Vi frågar aldrig efter koder, lösenord eller kortuppgifter.
+Din förälder ringer oss när något krånglar. Vi berättar var man trycker, och din förälder gör allt själv på sin egen telefon. Vi frågar aldrig efter koder, lösenord eller kortuppgifter.

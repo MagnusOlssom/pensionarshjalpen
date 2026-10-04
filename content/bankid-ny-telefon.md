@@ -1,6 +1,6 @@
 ---
 title: BankID på ny telefon – så flyttar du det med hjälp
-description: Har du fått en ny telefon och BankID följde inte med? Ring 070-432 69 24 så hjälper en vänlig människa dig att få BankID på plats igen, steg för steg.
+description: Har du fått en ny telefon och BankID följde inte med? Ring 0704-32 69 24 så hjälper en vänlig människa dig att få BankID på plats igen, steg för steg.
 h1: Jag har fått en ny telefon. Hur får jag med BankID?
 lead: BankID flyttar inte med av sig själv till en ny telefon. Vi hjälper dig att få det på plats igen.
 link: BankID på ny telefon
@@ -9,14 +9,14 @@ order: 12
 home: yes
 color: mint
 faq_q: Följer BankID med till en ny telefon?
-faq_a: Nej, oftast måste du skaffa BankID på nytt i den nya telefonen via din bank. Ring oss på 070-432 69 24 så gör vi det tillsammans, steg för steg.
+faq_a: Nej, oftast måste du skaffa BankID på nytt i den nya telefonen via din bank. Ring oss på 0704-32 69 24 så gör vi det tillsammans, steg för steg.
 ---
 ## Det här brukar krångla
 
-- Jag har fått en ny telefon, och BankID finns inte där.
+- Du har fått en ny telefon, och BankID finns inte där.
 - Den gamla telefonen är trasig eller borta.
-- Banken vill att jag ska skanna mitt pass, och det fungerar inte.
-- Jag vet inte om jag ska ta bort BankID från den gamla telefonen.
+- Banken vill att du håller passet mot telefonen, och det fungerar inte.
+- Du vet inte om du ska ta bort BankID från den gamla telefonen.
 
 ## Bra att veta
 

@@ -9,6 +9,7 @@ import html
 import json
 import re
 import shutil
+import subprocess
 from datetime import date
 from pathlib import Path
 
@@ -19,7 +20,7 @@ CONTENT = ROOT / "content"
 # Byt till https://pensionarshjalpen.se när domänen är kopplad (och lägg en CNAME-fil i src/).
 SITE_URL = "https://magnusolssom.github.io/pensionarshjalpen"
 NAME = "Pensionärshjälpen"
-PHONE_DISPLAY = "070-432 69 24"
+PHONE_DISPLAY = "0704-32 69 24"
 PHONE_TEL = "+46704326924"
 
 # ---------- små byggstenar ----------
@@ -39,24 +40,47 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
+COST_NOTE = "Just nu kostar hjälpen ingenting. Du betalar bara för samtalet, precis som när du ringer en vän."
+NO_ANSWER = "Svarar ingen? Då hjälper vi redan någon annan. Tala in ditt namn och nummer, så ringer vi upp dig så snart vi kan."
+
+
 def call_box(note=True):
-    """Samma ring-ruta överallt. Pekskärm = knapp, dator = stort nummer."""
-    out = f"""<div class="call">
-  <a class="call-button" href="tel:{PHONE_TEL}">{PHONE_ICON}<span><span class="small">Tryck här för att ringa</span><span class="num">{PHONE_DISPLAY}</span></span></a>
-  <div class="call-desk">
-    <p class="label">Ring det här numret från din telefon:</p>
-    <p class="big">{PHONE_DISPLAY}</p>
-  </div>
-</div>"""
+    """Samma ring-ruta överallt: ett vitt kort med numret. Pekskärm = knapp, dator = stort nummer."""
+    extra = ""
     if note:
-        out += '\n<p class="call-note">En vänlig människa svarar. Ingen robot, inga knappval.</p>'
-    return out
+        extra = f"""
+  <p class="call-note">En vänlig människa svarar. Ingen robot, inga knappval.</p>
+  <p class="call-note">{NO_ANSWER}</p>
+  <p class="call-cost">{COST_NOTE}</p>"""
+    return f"""<div class="call">
+  <a class="call-button" href="tel:{PHONE_TEL}">{PHONE_ICON}<span><span class="small">Tryck här, så ringer du oss</span><span class="num">{PHONE_DISPLAY}</span></span></a>
+  <div class="call-desk">
+    <p class="label">Ring det här numret från din vanliga telefon:</p>
+    <p class="big">{PHONE_DISPLAY}</p>
+  </div>{extra}
+</div>"""
+
+
+def eyebrow(text):
+    """Liten etikett ovanför rubriken – ger sidan rytm och berättar vad avsnittet handlar om."""
+    return f'<p class="eyebrow">{esc(text)}</p>'
+
+
+def portrait(up, size="small"):
+    """Porträttet av Magnus. Bygget krymper bilden (se main)."""
+    return (f'<img class="portrait {size}" src="{up}magnus.jpg" width="520" height="595" '
+            f'alt="Magnus, som startade Pensionärshjälpen, står vid vattnet och ler.">')
 
 
 def inline(s):
     s = esc(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     return s
+
+
+def heading(s):
+    """Rubriktext: namnet får en mjuk avstavning så det inte bryts mitt i ordet på en smal mobil."""
+    return inline(s).replace("Pensionärshjälpen", "Pensionärs&shy;hjälpen")
 
 
 def md(text):
@@ -148,24 +172,48 @@ def page(*, title, description, path, body, depth, schema=None):
 
 
 def brand():
-    return f'<div class="brand">{LOGO}<span>{NAME}</span></div>'
+    """Namnet uppe till höger. Inte klickbart – inget att råka trycka på."""
+    return f'<div class="brand"><span>{NAME}</span>{LOGO}</div>'
 
 
-def footer(depth, home=False, here=""):
+def grouped(topics):
+    """Ämnena grupperade efter `group` i innehållets front matter, dolda sidor borträknade."""
+    groups = {}
+    for t in topics:
+        if t.get("hidden") == "yes":
+            continue
+        groups.setdefault(t.get("group", "Övrigt"), []).append(t)
+    return groups
+
+
+def index_list(topics, up, cls="more"):
+    return f'<ul class="{cls}">' + "".join(
+        f'<li><a href="{up}{t["slug"]}/">{esc(t["link"])}</a></li>' for t in topics) + "</ul>"
+
+
+def footer(depth, topics, home=False, here=""):
     up = "../" * depth
     items = []
     if not home:
         items.append(("./", "Till startsidan"))
-    if here != "amnen":
-        items.append(("amnen/", "Alla ämnen"))
     if here != "om":
         items.append(("om/", "Om Pensionärshjälpen"))
     links = "".join(f'<li><a href="{up}{h}">{t}</a></li>' for h, t in items)
-    return f"""<footer class="block paper">
+    groups = "".join(
+        f'<div class="index-group"><h3>{esc(g)}</h3>{index_list(ts, up, "index")}</div>'
+        for g, ts in grouped(topics).items())
+    return f"""<footer class="block sky">
 <div class="inner">
-<ul class="more">{links}</ul>
-<p style="margin-top:2rem"><strong>{NAME}</strong><br>Telefon: {PHONE_DISPLAY}</p>
-<p>Den här sidan använder inga kakor (cookies) och samlar inte in något om dig.</p>
+<ul class="more foot-nav">{links}</ul>
+<nav class="index-wrap" aria-labelledby="alla-amnen">
+{eyebrow("Läs mer")}
+<h2 id="alla-amnen">Alla ämnen</h2>
+<div class="index-groups">{groups}</div>
+</nav>
+<div class="foot-meta">
+<p><strong>{NAME}</strong> – en människa som svarar<br>Telefon: {PHONE_DISPLAY}<br>Magnus Olsson</p>
+<p>Den här sidan använder inga kakor (cookies) och samlar inte in något om dig. Du kan läsa i lugn och ro.</p>
+</div>
 </div>
 </footer>"""
 
@@ -182,6 +230,14 @@ ORG_SCHEMA = {
 }
 
 # ---------- sidor ----------
+
+
+def lower_group(g):
+    """Gemener i rubriken, men BankID behåller sina versaler."""
+    g = re.sub(r"^Om ", "", g)
+    if g.startswith("BankID"):
+        return g
+    return g[0].lower() + g[1:]
 
 
 def build_topic(meta, all_topics):
@@ -202,16 +258,26 @@ def build_topic(meta, all_topics):
     if rel:
         lis = "".join(f'<li><a href="../{t["slug"]}/">{esc(t["link"])}</a></li>' for t in rel)
         related = f"""<section class="block paper"><div class="inner">
-<h2>Mer om {esc(meta['group'].lower())}</h2>
+{eyebrow("Läs mer")}
+<h2>Mer om {esc(lower_group(meta['group']))}</h2>
 <ul class="more">{lis}</ul>
 </div></section>"""
+    # `photo: yes` i front matter visar porträttet i sidhuvudet. Om-sidan får det alltid.
+    has_photo = meta.get("photo") == "yes" or meta["slug"] == "om"
+    photo = f'<div class="hero-photo">{portrait("../", "large")}</div>' if has_photo else ""
     body = f"""<main>
-<section class="block {meta.get('color', 'sky')} hero">
+<section class="block {meta.get('color', 'sky')} hero{' has-photo' if has_photo else ''}">
+{CLOUDS}
 <div class="inner">
 {brand()}
-<h1>{inline(meta['h1'])}</h1>
+<div class="hero-grid">
+<div class="hero-text">
+{photo}
+<h1>{heading(meta["h1"])}</h1>
 <p class="lead">{inline(meta['lead'])}</p>
+</div>
 {call_box()}
+</div>
 </div>
 </section>
 <section class="block paper">
@@ -221,14 +287,15 @@ def build_topic(meta, all_topics):
 </section>
 <section class="block mint">
 <div class="inner">
+{eyebrow("Ring oss")}
 <h2>Vill du ha hjälp med det här?</h2>
-<p>Ring oss. Vi tar det i din takt.</p>
+<p>Ring oss, så tar vi det i din takt. Du behöver inte ha läst klart.</p>
 {call_box(note=False)}
 </div>
 </section>
 {related}
 </main>
-{footer(1, here=meta["slug"])}"""
+{footer(1, all_topics, here=meta["slug"])}"""
     return page(
         title=meta["title"], description=meta["description"],
         path=meta["slug"] + "/", body=body, depth=1, schema=faq,
@@ -244,36 +311,43 @@ def build_home(topics):
 {CLOUDS}
 <div class="inner">
 {brand()}
+<div class="hero-grid">
+<div class="hero-text">
 <h1>Fastnat med mobilen eller datorn?</h1>
-<p class="lead">Ring oss. En vänlig människa svarar och hjälper dig, steg för steg.</p>
+<p class="lead">Ring oss, så svarar en människa som har tid. Vi tar det i din takt, ett steg i taget.</p>
+</div>
 {call_box()}
+</div>
 </div>
 </section>
 
 <section class="block sun">
 <div class="inner">
-<h2>Du kan ringa om allt som krånglar</h2>
+{eyebrow("Vad vi hjälper till med")}
+<h2>Du kan ringa om det mesta som krånglar</h2>
 <ul class="plain-list">
 <li>BankID och Swish</li>
 <li>Appar som inte vill fungera</li>
 <li>Deklarationen hos Skatteverket</li>
 <li>1177, recept och vårdbesök</li>
-<li>Kivra och digitala brev</li>
+<li>Kivra och brev som kommer i mobilen</li>
 <li>Att köpa något på nätet</li>
 <li>Rutor om kakor, villkor och avtal</li>
-<li>Sms och mejl som känns konstiga</li>
+<li>Sms och samtal som känns konstiga</li>
+<li>Texten som är för liten</li>
 </ul>
-<p>Är du osäker på om vi kan hjälpa till? Ring ändå.</p>
+<p>Är du osäker på om det här är något vi kan hjälpa till med? Ring ändå, så tar vi reda på det tillsammans.</p>
 </div>
 </section>
 
 <section class="block rose">
 <div class="inner">
+{eyebrow("Steg för steg")}
 <h2>Så går det till</h2>
 <ol class="steps">
-<li>Du ringer.</li>
-<li>Du berättar vad som krånglar.</li>
-<li>Vi löser det tillsammans, i din takt. Ingen fråga är för liten.</li>
+<li>Du ringer, när det passar dig.</li>
+<li>Du berättar vad du ser på skärmen. Du behöver inte veta vad saker heter.</li>
+<li>Vi tar det tillsammans, ett steg i taget, tills det fungerar. Ingen fråga är för liten.</li>
 </ol>
 </div>
 </section>
@@ -281,20 +355,32 @@ def build_home(topics):
 <section class="block paper">
 <div class="inner">
 <div class="promise">
+{eyebrow("Vårt löfte")}
 <h2>Det här gör vi aldrig</h2>
 <ul>
 <li>Vi frågar aldrig efter din kod till BankID, banken eller kortet.</li>
 <li>Vi ber dig aldrig att logga in med BankID åt oss.</li>
 <li>Vi ber dig aldrig att föra över pengar.</li>
-<li>Vi ringer aldrig upp dig utan att du har bett om det.</li>
+<li>Vi ringer bara upp dig om du själv har bett om det, till exempel när du har talat in ett meddelande.</li>
 </ul>
-<p>Om någon som säger att de är från oss ber om något av det här: lägg på.</p>
+<p>Om någon ringer och säger att de är från oss och ber om något av det här: lägg på. Det är inte vi.</p>
 </div>
 </div>
 </section>
 
 <section class="block mint">
 <div class="inner">
+<div class="about">
+{portrait("")}
+<div class="about-text">
+{eyebrow("Vem svarar?")}
+<h2>Hej, jag heter Magnus</h2>
+<p>Det är jag som svarar. Jag startade Pensionärshjälpen för att min mamma så ofta fastnade med mobilen och aldrig fick tag i en människa att fråga.</p>
+<p>Nu kan du ringa i stället.</p>
+<p class="about-link"><a href="om/">Mer om Pensionärshjälpen</a></p>
+</div>
+</div>
+{eyebrow("Ring oss")}
 <h2>Ring när det krånglar</h2>
 {call_box()}
 </div>
@@ -302,48 +388,49 @@ def build_home(topics):
 
 <section class="block paper">
 <div class="inner">
+{eyebrow("Vanliga frågor")}
 <h2>Läs mer</h2>
-<p>Här finns mer om sådant vi ofta får hjälpa till med.</p>
+<p>Här kan du läsa mer om sådant vi ofta hjälper till med. Du behöver inte läsa något innan du ringer.</p>
 <ul class="more">
 {more}
 </ul>
 </div>
 </section>
 </main>
-{footer(0, home=True, here="amnen")}"""
+{footer(0, topics, home=True)}"""
     return page(
-        title=f"{NAME} – telefonhjälp med mobilen, datorn och BankID",
-        description=f"Fastnat med BankID, Swish, en app eller deklarationen? Ring {PHONE_DISPLAY}. En vänlig människa svarar och hjälper dig steg för steg.",
+        title=f"{NAME} – en människa som svarar när mobilen, datorn eller BankID krånglar",
+        description=f"Krånglar BankID, Swish, en app eller deklarationen? Ring {PHONE_DISPLAY}. En vänlig människa svarar, har tid och hjälper dig steg för steg. Just nu kostar hjälpen ingenting.",
         path="", body=body, depth=0, schema=ORG_SCHEMA,
     )
 
 
 def build_amnen(topics):
-    groups = {}
-    for t in topics:
-        if t.get("hidden") == "yes":
-            continue
-        groups.setdefault(t.get("group", "Övrigt"), []).append(t)
-    parts = []
-    for g, ts in groups.items():
-        lis = "".join(f'<li><a href="../{t["slug"]}/">{esc(t["link"])}</a></li>' for t in ts)
-        parts.append(f'<h2 style="margin-top:2.4rem">{esc(g)}</h2>\n<ul class="more">{lis}</ul>')
+    parts = "".join(
+        f'<section class="topic-group"><h2>{esc(g)}</h2>{index_list(ts, "../")}</section>'
+        for g, ts in grouped(topics).items())
     body = f"""<main>
 <section class="block sun hero">
+{CLOUDS}
 <div class="inner">
 {brand()}
+<div class="hero-grid">
+<div class="hero-text">
 <h1>Det här brukar vi hjälpa till med</h1>
-<p class="lead">Hittar du inte det du letar efter? Ring ändå. Vi hjälper till med det mesta.</p>
+<p class="lead">Hittar du inte det du letar efter? Ring ändå, så tar vi reda på det tillsammans.</p>
+</div>
 {call_box()}
+</div>
 </div>
 </section>
 <section class="block paper">
 <div class="inner">
-{"".join(parts)}
+{eyebrow("Alla ämnen")}
+{parts}
 </div>
 </section>
 </main>
-{footer(1, here="amnen")}"""
+{footer(1, topics, here="amnen")}"""
     return page(
         title=f"Alla ämnen – {NAME}",
         description=f"BankID, Swish, Kivra, 1177, deklarationen, bedrägerier och mer. Ring {PHONE_DISPLAY} så hjälper en vänlig människa dig.",
@@ -359,6 +446,14 @@ def main():
     for f in (ROOT / "src").iterdir():
         if f.is_file():
             shutil.copy(f, OUT / f.name)
+    # Porträttet visas som mest ~260 px brett, så 520 px räcker (skarpt även på "retina").
+    # Krymper med macOS-verktyget sips om det finns – annars används originalet som det är.
+    try:
+        subprocess.run(["sips", "-Z", "520", "-s", "format", "jpeg", "-s", "formatOptions", "78",
+                        str(ROOT / "src" / "magnus.jpg"), "--out", str(OUT / "magnus.jpg")],
+                       check=True, capture_output=True)
+    except (OSError, subprocess.CalledProcessError):
+        pass
     (OUT / "favicon.svg").write_text(LOGO.replace(' aria-hidden="true" focusable="false"', ' xmlns="http://www.w3.org/2000/svg"'), encoding="utf-8")
     (OUT / ".nojekyll").write_text("")
 

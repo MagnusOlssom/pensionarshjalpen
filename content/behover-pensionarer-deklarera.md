@@ -1,6 +1,6 @@
 ---
 title: Behöver pensionärer deklarera? Så vet du vad som gäller
-description: Undrar du om du som pensionär behöver deklarera? Ring 070-432 69 24 så hjälper en vänlig människa dig att hitta och läsa igenom din deklaration.
+description: Undrar du om du som pensionär behöver deklarera? Ring 0704-32 69 24 så hjälper en vänlig människa dig att hitta och läsa igenom din deklaration.
 h1: Behöver jag deklarera nu när jag är pensionär?
 lead: Det är en vanlig fråga. Vi hjälper dig att ta reda på vad som gäller för dig och att titta igenom deklarationen.
 link: Måste jag deklarera?
@@ -9,7 +9,7 @@ order: 33
 home: no
 color: rose
 faq_q: Behöver pensionärer deklarera?
-faq_a: De flesta får en deklaration från Skatteverket och ska titta igenom den, men det kan skilja sig. Ring 070-432 69 24 så hjälper vi dig att ta reda på vad som gäller för dig.
+faq_a: De flesta får en deklaration från Skatteverket och ska titta igenom den, men det kan skilja sig. Ring 0704-32 69 24 så hjälper vi dig att ta reda på vad som gäller för dig.
 ---
 ## Det här brukar krångla
 

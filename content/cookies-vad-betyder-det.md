@@ -1,6 +1,6 @@
 ---
 title: Cookies – vad betyder rutan och vad ska jag klicka?
-description: Dyker det upp en ruta om cookies på varje webbsida? Här får du veta vad den betyder. Ring 070-432 69 24 om du vill ha hjälp av en människa.
+description: Dyker det upp en ruta om cookies på varje webbsida? Här får du veta vad den betyder. Ring 0704-32 69 24 om du vill ha hjälp av en människa.
 h1: Vad är rutan om cookies?
 lead: Rutan om cookies dyker upp på nästan alla webbsidor. Det är tryggt att tacka nej, sidan fungerar ändå.
 link: Vad är cookies

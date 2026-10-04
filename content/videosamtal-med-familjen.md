@@ -1,6 +1,6 @@
 ---
 title: Ring videosamtal med familjen – steg för steg
-description: Vill du se barnbarnen när ni pratar? Ring 070-432 69 24 så hjälper en vänlig människa dig att ringa videosamtal i mobilen eller på surfplattan.
+description: Vill du se barnbarnen när ni pratar? Ring 0704-32 69 24 så hjälper en vänlig människa dig att ringa videosamtal i mobilen eller på surfplattan.
 h1: Jag vill se familjen när vi pratar
 lead: Med ett videosamtal ser ni varandra i telefonen. Vi hjälper dig att komma igång.
 link: Ring videosamtal
@@ -9,7 +9,7 @@ order: 64
 home: no
 color: sun
 faq_q: Kan jag få hjälp att ringa videosamtal?
-faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att ringa videosamtal på din egen telefon eller surfplatta.
+faq_a: Ja. Ring Pensionärshjälpen på 0704-32 69 24 så hjälper vi dig att ringa videosamtal på din egen telefon eller surfplatta.
 ---
 ## Det här brukar krångla
 
@@ -23,7 +23,7 @@ faq_a: Ja. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig att ri
 
 Ett videosamtal är ett samtal där ni ser varandra på skärmen. Det går att ringa från mobilen, surfplattan eller datorn.
 
-Du är inte ensam om att behöva hjälp. Nästan var fjärde pensionär behöver hjälp med videosamtal, enligt Svenskarna och internet.
+Du är inte ensam. Nästan var fjärde pensionär behöver hjälp med just videosamtal, enligt undersökningen Svenskarna och internet.
 
 Oftast behöver båda ha samma app. En app är ett litet program i telefonen. Fråga familjen vilken de använder, så hjälper vi dig att lägga in den.
 

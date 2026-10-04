@@ -1,6 +1,6 @@
 ---
 title: BankID fungerar inte – ring så hjälper vi dig
-description: Fungerar inte BankID? Ring 070-432 69 24 så tar en lugn människa reda på vad som har hänt och hjälper dig vidare, steg för steg på din egen telefon.
+description: Fungerar inte BankID? Ring 0704-32 69 24 så tar en vänlig människa reda på vad som har hänt och hjälper dig vidare, steg för steg på din egen telefon.
 h1: Mitt BankID fungerar inte
 lead: Det finns några vanliga skäl till att BankID slutar fungera. Vi hjälper dig att hitta felet och lösa det.
 link: BankID fungerar inte
@@ -9,15 +9,15 @@ order: 13
 home: no
 color: rose
 faq_q: Varför fungerar inte mitt BankID?
-faq_a: Det kan bero på att BankID har slutat gälla, att telefonen är för gammal eller att appen behöver uppdateras. Ring oss på 070-432 69 24 så letar vi reda på felet tillsammans.
+faq_a: Det kan bero på att BankID har slutat gälla, att telefonen är för gammal eller att appen behöver uppdateras. Ring oss på 0704-32 69 24 så letar vi reda på felet tillsammans.
 ---
 ## Det här brukar krångla
 
 - BankID säger att det har slutat gälla.
 - Det fungerade förut, men inte efter en uppdatering.
-- Jag kan inte logga in på 1177 eller banken.
-- Jag har glömt min säkerhetskod.
-- Det kommer upp en ruta som jag inte förstår.
+- Du kan inte logga in på 1177 eller banken.
+- Du har glömt din säkerhetskod.
+- Det kommer upp en ruta som du inte förstår.
 
 ## Bra att veta
 

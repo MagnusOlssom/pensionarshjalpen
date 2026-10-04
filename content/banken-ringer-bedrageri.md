@@ -1,6 +1,6 @@
 ---
 title: Banken ringer – så känner du igen bedragare
-description: Har någon ringt och sagt att de är från banken? Lägg på. Ring 070-432 69 24 så hjälper en lugn människa dig att förstå vad du ska göra nu.
+description: Har någon ringt och sagt att de är från banken? Lägg på. Ring 0704-32 69 24 så hjälper en vänlig människa dig att förstå vad du ska göra nu.
 h1: Ringde banken och bad dig logga in?
 lead: Banken ber dig aldrig logga in med BankID i ett samtal. Här ser du hur bedragarna gör och vad du gör om det redan har hänt.
 link: Banken ringer
@@ -21,7 +21,7 @@ faq_a: Nej. Banken ber aldrig om BankID, koder eller att du ska flytta pengar i 
 
 ## Bra att veta
 
-Det här kallas befogenhetsbedrägeri. Bedragaren låtsas vara någon du litar på.
+Bedragaren låtsas vara någon du litar på. Polisen kallar det befogenhetsbedrägeri.
 
 **Logga aldrig in med BankID när någon som ringer ber dig om det.** Det är Polisens viktigaste råd.
 

@@ -1,6 +1,6 @@
 ---
 title: Glömt lösenordet? Så får du tillbaka ditt konto
-description: Har du glömt lösenordet till e-posten eller ett konto? Ring 070-432 69 24 så hjälper en vänlig människa dig att få ett nytt, lugnt och steg för steg.
+description: Har du glömt lösenordet till e-posten eller ett konto? Ring 0704-32 69 24 så hjälper en vänlig människa dig att få ett nytt, lugnt och steg för steg.
 h1: Jag har glömt mitt lösenord
 lead: Det händer alla. Oftast går det att få ett nytt lösenord, och vi hjälper dig hela vägen.
 link: Glömt lösenord
@@ -9,7 +9,7 @@ order: 63
 home: no
 color: rose
 faq_q: Vad gör jag om jag har glömt mitt lösenord?
-faq_a: Oftast kan du välja ett nytt lösenord. Ring Pensionärshjälpen på 070-432 69 24 så hjälper vi dig, du skriver alltid in lösenordet själv.
+faq_a: Oftast kan du välja ett nytt lösenord. Ring Pensionärshjälpen på 0704-32 69 24 så hjälper vi dig, du skriver alltid in lösenordet själv.
 ---
 ## Det här brukar krångla
 

@@ -17,16 +17,21 @@
 
 :root {
   --ink: #10264a;          /* mörkblå text */
+  --ink-soft: #3a4a68;     /* dämpad text, ändå 7:1 mot pastellerna */
   --sky: #cdebf7;          /* himmel */
   --sun: #ffe7a0;          /* sol */
   --rose: #fbd3de;         /* rosa */
   --mint: #d3f2e1;         /* mint */
   --paper: #fffdf8;        /* varmt vitt */
-  --berry: #c2335c;        /* varumärket */
+  --berry: #c2335c;        /* varumärket (bara i logotypen – för ljus som text) */
+  --berry-text: #8a1d3e;   /* etiketter: minst 6,6:1 mot alla bakgrunder */
   --call: #12672f;         /* samtalsknappens grön, som telefonens svara-knapp */
   --call-dark: #0c4f23;
   --focus: #ffbf00;
-  --wrap: 40rem;
+  --line: rgba(16, 38, 74, 0.25);
+  --wrap: 40rem;           /* textbredd ≈ 60–65 tecken */
+  --wrap-wide: 50rem;      /* sidhuvudet på dator: två spalter */
+  --radius: 1.4rem;
   font-size: 137.5%;       /* 22 px grundtext */
 }
 @media (min-width: 900px) { :root { font-size: 150%; } } /* 24 px */
@@ -40,49 +45,86 @@ body {
   color: var(--ink);
   background: var(--paper);
 }
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: auto; } }
+img { display: block; max-width: 100%; height: auto; }
 
-h1, h2, h3 { line-height: 1.2; margin: 0 0 0.6em; }
-h1 { font-size: clamp(2.1rem, 8vw, 3.4rem); letter-spacing: -0.01em; }
-h2 { font-size: clamp(1.6rem, 5.5vw, 2.3rem); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.6em; overflow-wrap: break-word; }
+h1 { font-size: clamp(2.1rem, 8vw, 3.2rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.6rem, 5.5vw, 2.1rem); }
 h3 { font-size: 1.25rem; }
 p, ul, ol { margin: 0 0 1em; }
 strong { font-weight: 700; }
 
 /* Block = en helfärgad sektion med ett enda budskap */
-.block { padding: 3.2rem 1.1rem; }
+.block { padding: 3.4rem 1.1rem; }
 .block > .inner { max-width: var(--wrap); margin: 0 auto; }
 .sky  { background: var(--sky); }
 .sun  { background: var(--sun); }
 .rose { background: var(--rose); }
 .mint { background: var(--mint); }
 .paper{ background: var(--paper); }
+@media (min-width: 900px) { .block { padding: 4.2rem 1.5rem; } }
 
-/* Topp: bara namnet. Inte klickbart – inget att råka trycka på. */
-.brand {
+/* Etikett ovanför rubriken: liten, fet, med ett kort streck. Ger rytm utan att skrika. */
+.eyebrow {
   display: flex; align-items: center; gap: 0.6rem;
-  font-weight: 700; font-size: 1.15rem; margin-bottom: 2.2rem;
+  font-size: 0.95rem; font-weight: 700; color: var(--berry-text);
+  margin: 0 0 0.7rem;
 }
-.brand svg { width: 2.4rem; height: 2.4rem; flex: none; }
+.eyebrow::before { content: ""; width: 1.6rem; height: 0.2rem; border-radius: 1rem; background: currentColor; flex: none; }
 
-.hero { position: relative; overflow: hidden; padding-top: 1.6rem; }
+/* Topp: bara namnet, uppe till höger. Inte klickbart – inget att råka trycka på. */
+.brand {
+  display: flex; align-items: center; justify-content: flex-end; gap: 0.6rem;
+  font-weight: 700; font-size: 1.1rem; margin-bottom: 1.8rem;
+}
+.brand svg { width: 2.2rem; height: 2.2rem; flex: none; }
+
+/* ---------- Sidhuvudet ---------- */
+.hero { position: relative; overflow: hidden; padding-top: 1.2rem; padding-bottom: 3rem; }
 .hero .inner { position: relative; z-index: 1; }
-.cloud { position: absolute; z-index: 0; pointer-events: none; fill: #fff; opacity: 0.9; }
-.cloud.a { width: 16rem; top: 1.5rem; right: -5rem; }
-.cloud.b { width: 11rem; bottom: 1rem; left: -4rem; opacity: 0.7; }
-.lead { font-size: 1.3rem; }
+.hero-text { margin-bottom: 1.6rem; }
+.lead { font-size: 1.25rem; line-height: 1.4; margin-bottom: 0; }
+
+/* Molnen: hela, mjuka, i hörnen som inte används av texten – aldrig halvt avklippta. */
+.cloud { position: absolute; z-index: 0; pointer-events: none; fill: #fff; opacity: 0.55; }
+.cloud.a { width: 9rem; top: 0.9rem; left: 1rem; }
+.cloud.b { width: 7rem; bottom: 0.6rem; right: 1.2rem; }
+.sun .cloud { opacity: 0.45; }
+.has-photo .cloud.a { display: none; } /* porträttet står där molnet annars ligger */
+
+/* Dator: två spalter – text till vänster, ring-kortet till höger. Så får sidhuvudet
+   plats på en liten bärbar skärm utan att man behöver rulla. */
+@media (min-width: 1000px) and (hover: hover) and (pointer: fine) {
+  .hero .inner { max-width: var(--wrap-wide); }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.4rem; align-items: center; }
+  .hero-text { margin-bottom: 0; }
+  .hero .call { margin-top: 0; }
+  .hero h1 { font-size: clamp(2.3rem, 3.4vw, 3rem); }
+  .cloud.a { left: 3%; top: 0.6rem; width: 10rem; }
+  .cloud.b { right: 2%; bottom: 0.4rem; width: 7rem; }
+}
+/* Låg skärm (bärbar med webbläsarens ram): tätare luft, men samma textstorlek i brödtexten. */
+@media (max-height: 700px) and (min-width: 1000px) {
+  .hero { padding-top: 0.8rem; padding-bottom: 1.6rem; }
+  .brand { margin-bottom: 1rem; }
+  .hero h1 { font-size: clamp(2.1rem, 3.1vw, 2.6rem); margin-bottom: 0.45em; }
+  .hero .lead { font-size: 1.15rem; }
+  .hero .call-card, .hero .call { padding-top: 1rem; padding-bottom: 1rem; }
+  .hero .call-note { margin-top: 0.7rem; }
+}
 
 /* ---------- RING-rutan ----------
+   Ett vitt kort som samlar allt om samtalet.
    Pekskärm: en stor grön knapp som ringer direkt.
    Dator/mus: samma nummer som stor text – ingen knapp som öppnar
    förvirrande "Öppna FaceTime?"-rutor. */
-.call { margin: 1.6rem 0 0.4rem; }
+.call { margin: 1.6rem 0 0; }
 .call-button {
   display: flex; align-items: center; justify-content: center; gap: 0.7rem;
   width: 100%;
   min-height: 5.2rem;
-  padding: 1rem 1.2rem;
-  border-radius: 1.4rem;
+  padding: 1rem 0.9rem;
+  border-radius: 1.1rem;
   background: var(--call);
   color: #fff;
   text-decoration: none;
@@ -97,37 +139,45 @@ strong { font-weight: 700; }
 .call-button .num { white-space: nowrap; display: block; }
 .call-button .small { display: block; font-size: 0.62em; font-weight: 400; }
 .call-desk { display: none; }
-.call-desk .label { font-size: 1.2rem; margin: 0 0 0.2rem; }
+.call-desk .label { font-size: 1.1rem; margin: 0 0 0.1rem; }
 .call-desk .big {
-  display: inline-block;
-  font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: 0.02em;
-  background: #fff; border: 0.18rem solid var(--ink); border-radius: 1.2rem;
-  padding: 0.3rem 1.2rem; margin: 0.2rem 0 0.6rem;
+  font-size: clamp(2.2rem, 4.6vw, 3.1rem); font-weight: 700; letter-spacing: 0.02em;
+  line-height: 1.15; margin: 0; white-space: nowrap;
 }
-.call-desk .hint { font-size: 1rem; margin: 0; }
 @media (hover: hover) and (pointer: fine) {
   .call-button { display: none; }
   .call-desk { display: block; }
+  /* På dator ramas numret in av ett vitt kort. På pekskärm är den gröna knappen själv "kortet". */
+  .call {
+    background: #fff; border: 0.2rem solid var(--ink); border-radius: var(--radius);
+    padding: 1.2rem 1.2rem 1.1rem;
+  }
 }
-.call-note { font-size: 1rem; margin-top: 1.1rem; }
+.call-note { font-size: 1rem; margin: 1rem 0 0; }
+.call-cost { font-size: 0.9rem; color: var(--ink-soft); margin: 0.6rem 0 0; padding-top: 0.6rem; border-top: 0.1rem solid var(--line); }
+.call-note:last-child, .call-cost:last-child { margin-bottom: 0; }
 
 /* Listor som bara är text – medvetet inte klickbara */
 .plain-list { list-style: none; padding: 0; }
 .plain-list li {
   padding: 0.55rem 0 0.55rem 2.2rem; position: relative;
-  border-bottom: 0.1rem dashed rgba(16, 38, 74, 0.25);
+  border-bottom: 0.1rem dashed var(--line);
 }
 .plain-list li:last-child { border-bottom: 0; }
 /* En bock, inte en prick – prickar kan se ut som knappar man ska trycka på */
 .plain-list li::before {
   content: "✓"; position: absolute; left: 0.1rem; top: 0.5rem;
-  font-weight: 700; color: var(--berry);
+  font-weight: 700; color: var(--berry-text);
+}
+@media (min-width: 900px) {
+  .plain-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.4rem; }
+  .plain-list li:nth-last-child(2) { border-bottom: 0; }
 }
 
 .steps { list-style: none; padding: 0; counter-reset: s; }
-.steps li { counter-increment: s; position: relative; padding: 0 0 1.3rem 3.6rem; min-height: 2.8rem; }
+.steps li { counter-increment: s; position: relative; padding: 0.15rem 0 1.3rem 3.6rem; min-height: 2.8rem; }
 .steps li::before {
-  content: counter(s); position: absolute; left: 0; top: -0.15rem;
+  content: counter(s); position: absolute; left: 0; top: 0;
   width: 2.6rem; height: 2.6rem; border-radius: 50%;
   background: var(--ink); color: #fff; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
@@ -135,30 +185,59 @@ strong { font-weight: 700; }
 
 /* Löftet – vad vi ALDRIG gör */
 .promise {
-  background: #fff; border: 0.2rem solid var(--ink); border-radius: 1.4rem;
-  padding: 1.4rem 1.3rem 0.6rem;
+  background: #fff; border: 0.2rem solid var(--ink); border-radius: var(--radius);
+  padding: 1.5rem 1.4rem 0.7rem;
 }
 .promise ul { padding-left: 1.2rem; }
 .promise li { margin-bottom: 0.5rem; }
 
-/* Läs mer – längst ner, stora fält med luft emellan */
+/* Om Magnus – ett riktigt ansikte och ett riktigt namn */
+.portrait {
+  width: 10rem; height: 10rem; object-fit: cover; object-position: 50% 30%;
+  border-radius: 2.2rem; border: 0.2rem solid #fff; box-shadow: 0 0.2rem 0 var(--line);
+}
+.about { display: flex; flex-direction: column; gap: 1.3rem; margin-bottom: 3rem; padding-bottom: 2.6rem; border-bottom: 0.1rem dashed var(--line); }
+.about-text p { margin-bottom: 0.8em; }
+.about-link { margin: 1.2rem 0 0; }
+.about-link a {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 3.5rem; padding: 0.7rem 1.2rem;
+  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700;
+  border: 0.15rem solid var(--ink); border-radius: 1.1rem; font-size: 1rem;
+}
+.about-link a::after { content: "→"; font-size: 1.3rem; flex: none; }
+@media (min-width: 900px) {
+  .about { flex-direction: row; align-items: flex-start; gap: 2rem; }
+  .portrait { width: 11rem; height: 11rem; flex: none; }
+  .about-text { flex: 1; }
+}
+/* Porträtt i sidhuvudet på Om-sidan */
+.hero-photo { margin-bottom: 1.2rem; }
+.portrait.large { width: 9rem; height: 9rem; }
+@media (min-width: 900px) {
+  .portrait.large { width: 8.5rem; height: 8.5rem; }
+  .hero-photo { margin-bottom: 1rem; }
+}
+@media (max-height: 700px) and (min-width: 1000px) {
+  .portrait.large { width: 7rem; height: 7rem; }
+}
+
+/* Läs mer – stora fält med luft emellan */
 .more { list-style: none; padding: 0; margin: 0; }
 .more li + li { margin-top: 1rem; }
-.more a {
+.more a, .back {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
   min-height: 4rem; padding: 0.8rem 1.2rem;
   background: #fff; color: var(--ink); text-decoration: none; font-weight: 700;
   border: 0.15rem solid var(--ink); border-radius: 1.1rem;
 }
 .more a::after { content: "→"; font-size: 1.4rem; flex: none; }
-.more a:active { background: var(--sky); }
+.more a:active, .index a:active, .about-link a:active { background: var(--sky); }
+.back { justify-content: center; margin-top: 0.5rem; }
 
-.back {
-  display: flex; align-items: center; justify-content: center;
-  min-height: 4rem; padding: 0.8rem 1.2rem; margin-top: 0.5rem;
-  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700;
-  border: 0.15rem solid var(--ink); border-radius: 1.1rem;
-}
+/* Sidan "Alla ämnen" */
+.topic-group + .topic-group { margin-top: 2.8rem; }
+.topic-group h2 { font-size: 1.45rem; margin-bottom: 0.8rem; }
 
 /* Undersidornas brödtext */
 .article h2 { font-size: 1.45rem; margin-top: 1.8rem; }
@@ -171,8 +250,27 @@ strong { font-weight: 700; }
   background: var(--rose); border-radius: 1.1rem; padding: 1rem 1.2rem 0.1rem; margin: 1.4rem 0;
 }
 
-footer.block { padding-top: 2.4rem; padding-bottom: 3rem; font-size: 0.95rem; }
-footer p { margin-bottom: 0.6rem; }
+/* ---------- Sidfot: knappar, alla ämnen, kontakt ---------- */
+footer.block { padding-top: 3rem; padding-bottom: 3rem; }
+.foot-nav { margin-bottom: 2.8rem; }
+.foot-nav:empty { display: none; margin: 0; }
+.index-wrap h2 { margin-bottom: 1.2rem; }
+.index-group { margin-bottom: 1.8rem; }
+.index-group h3 { font-size: 1.05rem; margin: 0 0 0.6rem; padding-bottom: 0.3rem; border-bottom: 0.1rem dashed var(--line); }
+.index { list-style: none; padding: 0; margin: 0; }
+.index li + li { margin-top: 0.5rem; }
+.index a {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+  min-height: 3rem; padding: 0.55rem 0.9rem;
+  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1rem;
+  border: 0.12rem solid var(--ink); border-radius: 0.9rem;
+}
+.index a::after { content: "→"; flex: none; }
+@media (min-width: 900px) {
+  .index-groups { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; }
+}
+.foot-meta { margin-top: 2.4rem; padding-top: 1.6rem; border-top: 0.1rem solid var(--line); font-size: 0.95rem; }
+.foot-meta p { margin-bottom: 0.6rem; }
 
 a:focus-visible, .call-button:focus-visible {
   outline: 0.25rem solid var(--focus); outline-offset: 0.25rem;

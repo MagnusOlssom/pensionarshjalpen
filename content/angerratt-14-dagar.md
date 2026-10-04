@@ -1,6 +1,6 @@
 ---
 title: Ångerrätt 14 dagar – när gäller den och hur gör jag?
-description: Har du köpt något på nätet eller i telefon och ångrar dig? Oftast har du 14 dagars ångerrätt. Ring 070-432 69 24 så hjälper vi dig att ångra köpet.
+description: Har du köpt något på nätet eller i telefon och ångrar dig? Oftast har du 14 dagars ångerrätt. Ring 0704-32 69 24 så hjälper vi dig att ångra köpet.
 h1: Kan jag ångra mitt köp?
 lead: Har du handlat på nätet eller i telefon har du oftast 14 dagar på dig att ångra dig. Här ser du vad som gäller.
 link: Ångra ett köp

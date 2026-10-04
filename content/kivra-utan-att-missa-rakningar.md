@@ -1,6 +1,6 @@
 ---
 title: Kivra och räkningar – så missar du inga betalningar
-description: Rädd att missa en räkning i Kivra? Ring 070-432 69 24 så hjälper en vänlig människa dig att hitta dina räkningar och få koll på posten, steg för steg.
+description: Rädd att missa en räkning i Kivra? Ring 0704-32 69 24 så hjälper en vänlig människa dig att hitta dina räkningar och få koll på posten, steg för steg.
 h1: Jag är rädd att missa en räkning i Kivra
 lead: Det är en vanlig oro, och den går att lösa. Vi hjälper dig att få ordning på räkningarna i din digitala brevlåda.
 link: Koll på räkningarna
@@ -9,7 +9,7 @@ order: 31
 home: no
 color: sun
 faq_q: Hur vet jag att jag inte missar en räkning i Kivra?
-faq_a: Titta i Kivra en fast dag varje vecka och se till att aviseringarna fungerar. Ring 070-432 69 24 så hjälper vi dig att ställa in det.
+faq_a: Titta i Kivra en fast dag varje vecka och se till att aviseringarna fungerar. Ring 0704-32 69 24 så hjälper vi dig att ställa in det.
 ---
 ## Det här brukar krångla
 

@@ -1,6 +1,6 @@
 ---
 title: Bluff-sms från PostNord – så vet du om det är falskt
-description: Fått sms från PostNord om ett paket och en avgift? Det kan vara bluff. Ring 070-432 69 24 så tittar vi lugnt på det tillsammans med dig.
+description: Fått sms från PostNord om ett paket och en avgift? Det kan vara bluff. Ring 0704-32 69 24 så tittar vi lugnt på det tillsammans med dig.
 h1: Fått ett sms från PostNord?
 lead: Många får falska sms om paket som väntar. Här ser du hur du känner igen dem och vad du gör om du redan har klickat.
 link: Sms från PostNord

@@ -1,6 +1,6 @@
 ---
 title: BankID på gammal telefon – slutar det fungera 2026?
-description: Har BankID slutat fungera på din gamla telefon? Ring 070-432 69 24 så hjälper en vänlig människa dig att se vad som gäller och vad du kan göra nu.
+description: Har BankID slutat fungera på din gamla telefon? Ring 0704-32 69 24 så hjälper en vänlig människa dig att se vad som gäller och vad du kan göra nu.
 h1: Slutar BankID fungera på min gamla telefon?
 lead: Från 2026 fungerar BankID bara på lite nyare telefoner. Vi hjälper dig att ta reda på vad som gäller för din telefon.
 link: BankID på gammal telefon
@@ -9,14 +9,14 @@ order: 14
 home: no
 color: sun
 faq_q: Fungerar BankID på min gamla telefon?
-faq_a: Från mars 2026 kräver mobilt BankID en nyare telefon, och många äldre modeller slutar fungera. Ring oss på 070-432 69 24 så kollar vi din telefon tillsammans.
+faq_a: Från mars 2026 kräver mobilt BankID en nyare telefon, och många äldre modeller slutar fungera. Ring oss på 0704-32 69 24 så kollar vi din telefon tillsammans.
 ---
 ## Det här brukar krångla
 
 - BankID har plötsligt slutat fungera.
-- Jag vet inte hur gammal min telefon är.
+- Du vet inte hur gammal din telefon är.
 - Det står att telefonen måste uppdateras, men det går inte.
-- Jag vill inte köpa en ny telefon i onödan.
+- Du vill inte köpa en ny telefon i onödan.
 
 ## Bra att veta
 
