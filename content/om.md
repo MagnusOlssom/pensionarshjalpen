@@ -14,7 +14,7 @@ color: rose
 
 Många äldre har kämpat och lärt sig allt som har kommit genom åren: nya telefoner, nya kort, nya sätt att betala. Men de senaste åren har allt bytt skepnad fortare än någon hinner med. Det är lätt att trycka fel. Det är så mycket på skärmen samtidigt att det tar lång tid att hitta rätt.
 
-Värst är känslan av att inte kunna nå någon. Vill man fråga ett företag ska man fylla i ett formulär. Ofta svarar en robot, eller så får man sitta i telefonkö. Jag såg det hos en närstående, och hon är inte ensam om den känslan. Många som har klarat det mesta i livet står plötsligt med en telefon i handen och ingen att fråga.
+Värst är känslan av att inte kunna nå någon. Vill man fråga ett företag ska man fylla i ett formulär. Ofta svarar en robot, eller så får man sitta i telefonkö. Jag såg det hos mina närstående, och de är inte ensamma om den känslan. Många som har klarat det mesta i livet står plötsligt med en telefon i handen och ingen att fråga.
 
 ## Därför svarar en människa
 
